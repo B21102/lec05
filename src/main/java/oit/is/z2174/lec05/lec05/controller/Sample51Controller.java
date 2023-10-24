@@ -52,18 +52,18 @@ public class Sample51Controller {
     return "sample51.html";
   }
 
-  // @GetMapping("step4")
-  // @Transactional
-  // public String sample54(@RequestParam Integer id, ModelMap model) {
-  // // 編集対象のフルーツを取得
-  // Fruit fruit4 = fMapper.selectById(id);
-  // model.addAttribute("fruit4", fruit4);
+  @GetMapping("step4")
+  @Transactional
+  public String sample54(@RequestParam Integer id, ModelMap model) {
+    // // 編集対象のフルーツを取得
+    Fruit fruit4 = fMapper.selectById(id);
+    model.addAttribute("fruit4", fruit4);
 
-  // // フルーツリストを取得
-  // ArrayList<Fruit> fruits2 = fMapper.selectAllFruit();
-  // model.addAttribute("fruits2", fruits2);
-  // return "sample51.html";
-  // }
+    // フルーツリストを取得
+    ArrayList<Fruit> fruits2 = fMapper.selectAllFruit();
+    model.addAttribute("fruits2", fruits2);
+    return "sample51.html";
+  }
 
   // /**
   // * IDをクエリParamで，果物の名前と値段をフォームで受け取り，DBを更新する
